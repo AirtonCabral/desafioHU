@@ -1,0 +1,53 @@
+<div id="cardlocais">
+    <div class="row">
+        <div class="col-sm-5">
+            <h4>ESCOLHA SUA MELHOR OPÇÃO</h4>
+        </div>
+        <div class="col-sm-4 selectMargin">
+            <label class="col-sm-4" for="saidas">SAÍDAS:</label>
+            <select class="col-sm-8 styled-select slate" ng-click="vm.resetLimit()" name="saidas" id="saidas" ng-model="vm.saidas">
+                <option value="">Escolha</option>
+                <option value="{{from}}" ng-repeat="from in vm.uniqueFrom | orderBy">{{from}}</option>
+            </select>
+        </div>
+        <div class="col-sm-3 selectMargin">
+            <label class="col-sm-6" for="Diaria">N DE DIÁRIAS:</label>
+            <select class="col-sm-6 styled-select slate" ng-click="vm.resetLimit()" name="diarias" id="diarias" ng-model="vm.diarias">
+                    <option value="" >Escolha</option>
+                    <option value="5" >5</option>
+                    <option value="8" >8</option>
+                    <option value="12" >12</option>
+                </select>
+        </div>
+    </div>
+    <hr>
+    <!-- ng-click="vm.selected(option.id)" ng-class="{selectedBorder: vm.borderOn === option.id }" value="{{option.id}}"-->
+    <div class="cardsOfertas" ng-click="vm.selected($index)" ng-class="{selectedBorder: vm.borderOn === $index}" ng-repeat="option in vm.locais | filter: {from: vm.saidas, daily: vm.diarias} | limitTo: vm.limit  track by $index">
+        <div class="col-sm-5">
+            <h4>{{option.title}}</h4>
+            <p>{{option.description}}</p>
+        </div>
+        <div class="col-sm-2 box">
+            <h4>Saídas</h4>
+            <p ng-repeat="from in option.from ">{{from}}</p>
+        </div>
+        <div class="col-sm-2 box text-center">
+            <h4>{{option.daily}} <img src="./images/icones/iconeDiaria.jpg" alt=""> </h4>
+            <p>Diárias</p>
+            <h4>1 <img src="./images/icones/iconePessoa.jpg" alt=""></h4>
+            <p>Pessoas</p>
+        </div>
+        <div class="col-sm-3 box boxPreco text-center">
+            <h5 class="textGreen" ng-if="$even"> $ Cancelamento Grátis</h5>
+            <h5 class="textOrange" ng-if="!$even"> $ Tarifa não reembolsavel</h5>
+            <span class="porapenas">Por apenas</span>
+            <h1><span class="cifrao">R$ </span>{{option.price}}</h1>
+            <p class="taxas">+ taxas em até 10x</p>
+            <button class="btn btn-block btn-warning">QUERO IR</button>
+        </div>
+
+    </div>
+    <button class="btn btn-block btn-warning" ng-click="vm.increaselimit()">Veja Mais</button>
+    <br>
+    <!-- </div> -->
+</div>

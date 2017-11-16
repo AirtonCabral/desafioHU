@@ -1,0 +1,67 @@
+#cardlocais select {
+  -webkit-appearance: none;
+}
+
+#cardlocais .styled-select.slate {
+  background: url("../../images/apoio/setaSelect.jpg") no-repeat right center;
+  height: 26px;
+  overflow: hidden;
+  min-width: 130px;
+  box-shadow: 2px 3px 0px 0px rgba(0, 0, 0, 0.04);
+  margin-top: -3px;
+}
+
+#cardlocais .selectMargin {
+  margin-top: 9px;
+}
+
+#cardlocais hr {
+  margin-top: 6px;
+}
+
+#cardlocais .cardsOfertas {
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  min-height: 210px;
+  margin-bottom: 15px;
+}
+
+#cardlocais .cardsOfertas .box {
+  min-height: 207px;
+  height: 100%;
+  border-left: 1px solid rgba(128, 128, 128, 0.16);
+}
+
+#cardlocais .cardsOfertas .boxPreco .porapenas {
+  font-size: 14px;
+}
+
+#cardlocais .cardsOfertas .boxPreco .cifrao {
+  font-size: 14px;
+}
+
+#cardlocais .cardsOfertas .boxPreco .taxas {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#cardlocais .cardsOfertas .boxPreco h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#cardlocais .cardsOfertas .boxPreco .textOrange {
+  color: orange;
+  margin-bottom: 20px;
+}
+
+#cardlocais .cardsOfertas .boxPreco .textGreen {
+  color: green;
+  margin-bottom: 20px;
+}
+
+#cardlocais .selectedBorder {
+  border: 2px solid orange;
+}
+ 
+
+ /*# sourceMappingURL= card_locais.css.map */

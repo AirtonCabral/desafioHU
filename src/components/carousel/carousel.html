@@ -1,0 +1,32 @@
+<h1>{{vm.item.title}}</h1>
+<h4>{{vm.item.location}}</h4>
+<h5>{{vm.item.description}}</h5>
+
+<div class="slider">
+    <img ng-repeat="image in vm.slides" src="{{image}}" alt="{{image}}" style="width:100%">
+</div>
+<div class="slider-nav">
+    <img ng-repeat="image in vm.slides" src="{{image}}" alt="{{image}}" style="width:100%">
+</div>
+
+<script>
+    $(document).ready(() => {
+        $('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            centerMode: false,
+            fade: true,
+            asNavFor: '.slider-nav',
+            focusOnSelect: true
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            dots: false,
+            centerMode: false,
+            asNavFor: '.slider',
+            focusOnSelect: true
+        });
+    });
+</script>

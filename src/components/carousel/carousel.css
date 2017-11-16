@@ -1,0 +1,48 @@
+.slider .slick-list .slick-track {
+  margin-bottom: 5px;
+}
+
+.slider .slick-prev {
+  left: 0px;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 70px;
+  color: white;
+}
+
+.slider .slick-prev:before {
+  content: "<";
+}
+
+.slider .slick-next {
+  right: 0px;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 70px;
+  color: white;
+}
+
+.slider .slick-next:before {
+  content: ">";
+}
+
+.slider-nav {
+  margin-bottom: 20px;
+}
+
+.slider-nav .slick-list .slick-track .slick-slide {
+  padding: 0px 5px 0px 0px;
+}
+
+.slider-nav .slick-list .slick-track .slick-active {
+  opacity: 1;
+}
+
+.slider-nav .slick-list .slick-track .slick-current {
+  opacity: 0.5;
+}
+ 
+
+ /*# sourceMappingURL= carousel.css.map */

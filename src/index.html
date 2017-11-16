@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="app">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--build:js scripts/main.js -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/angular-mocks/angular-mocks.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="../slick-1.8.0/slick/slick.js"></script>
+
+    <script src="core.module.js"></script>
+    <script src="core.controller.js"></script>
+    <script src="core.service.js"></script>
+    <script src="core.config.js"></script>
+    <script src="./pages/home/home.controller.js"></script>
+    <script src="./pages/about/about.controller.js"></script>
+    <script src="./components/carousel/carousel.component.js"></script>
+    <script src="./components/card_locais/card_locais.component.js"></script>
+    <!-- endbuild -->
+    <!--build:css css/style.css -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../slick-1.8.0/slick/slick.css">
+    <link rel="stylesheet" href="../slick-1.8.0/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="./pages/home/home.css">
+    <link rel="stylesheet" href="./components/card_locais/card_locais.css">
+    <link rel="stylesheet" href="./components/carousel/carousel.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-controller="CoreController as vm">
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</body>
+
+</html>
